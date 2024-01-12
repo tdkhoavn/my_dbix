@@ -1,0 +1,9 @@
+% layout 'default', title => 'List of Books';
+
+<%= $msg %>
+
+<ul class="pl-5 space-y-3 text-gray-600 list-decimal marker:text-purple-600">
+% for my $book (@$books) {
+    <li><%= $book->{name} %> by <%= $book->{author_name} %>, just $<%= $book->{price} %></li>
+% }
+</ul>
